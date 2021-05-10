@@ -1,0 +1,30 @@
+<!-- <button type="button" (click)="changeBg()">
+  Click me
+</button>
+
+<div [style.color]="isChange ? 'red' : 'yellow'">
+  <p [style.font-size]="isChange ? '50px' : '30px'"> Hello </p>
+</div> -->
+
+
+<br>
+
+<select [(ngModel)]="gender" (change)="onChange($event)">
+  <option [value]="null" selected>Select</option>
+  <option value="F">Female</option>
+  <option value="M">Male</option>
+</select>
+
+<input type="text" id="uid" [style]="gender=='M' ? maleStyle : femaleStyle">
+
+<br>
+
+<input type="text" id="uid2" value="Hellooo"
+  [ngStyle]="{
+              'color' : 'red',
+              'font-size' : '60px'
+            }">
+
+
+<!-- <input type="text" id="uid2" value="Hellooo"
+  [ngClass]="{'myclass' : gender=='M'}"> -->
